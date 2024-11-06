@@ -23,6 +23,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    document.getElementById('downloadButton').addEventListener('click', function() {
+        // Select the element that you want to download as a PDF
+        const resumeContent = document.getElementById('resumeContent'); // replace with your resume section's id
+        
+        // Set up PDF options
+        const options = {
+            margin:       0.2,
+            filename:     'resume.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2 },
+            jsPDF:        { unit: 'in', format: 'A4', orientation: 'portrait' }
+        };
+    
+        // Generate the PDF
+        html2pdf().set(options).from(resumeContent).save();
+    });
+
     
     
 });
