@@ -1,0 +1,232 @@
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #EAF6F6;
+    color: #333;
+    animation: bgAnimation 8s infinite alternate;
+}
+
+@keyframes bgAnimation {
+    0% { background-color: #EAF6F6; }
+    100% { background-color: #A9DBDB; }
+}
+
+/* Back Icon */
+.back-icon {
+    position: fixed; /* Fixed position to stay at the top-left */
+    top: 20px;
+    left: 20px;
+    color: #66BFBF;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: #EAF6F6;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensures it appears above other content */
+}
+
+.back-icon:hover {
+    background-color: #66BFBF;
+    color: #EAF6F6;
+    transform: translateX(-3px); /* Small move left effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.back-icon:active {
+    transform: scale(0.95); /* Slight shrink on click */
+}
+
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #66BFBF;
+    color: white;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+.intro {
+    font-size: 1.4em;
+    animation: blinkText 2s infinite;
+}
+
+@keyframes blinkText {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    display: grid;
+    grid-gap: 30px;
+}
+
+/* Section Styling */
+.section {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.section:hover {
+    transform: scale(1.03);
+}
+
+h2 {
+    color: #66BFBF;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+/* Internship Section */
+.internship ul {
+    list-style: none;
+    padding: 0;
+}
+
+.internship li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.1em;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: calc(50% - 10px);
+    background: #EAF6F6;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s ease-out;
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.skill-item img {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+}
+
+.skill-item p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Language Section */
+.language ul {
+    list-style: none;
+    padding: 0;
+    display:block;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.language ul li {
+    background-color: #66BFBF;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.language ul li:hover {
+    background-color: #55AFAF;
+}
+
+/* Hobbies Section */
+.hobbies ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.hobbies ul li {
+    background-color: #66BFBF;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.hobbies ul li:hover {
+    background-color: #55AFAF;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #66BFBF;
+    color: white;
+    font-size: 1.1em;
+    margin-top: 30px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+button {
+    background-color: #66BFBF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; /* Added padding for better appearance */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block; /* Make it a block element */
+    margin: 20px auto; /* Center it horizontally */
+}
+
+button:hover {
+    background-color: #5ca5a5;
+}

@@ -1,0 +1,82 @@
+body {
+    background-color: #EAF6F6;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+h1 {
+    text-align: center;
+    color: #66BFBF;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #66BFBF;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.input-group input[type="file"] {
+    border: 1px solid #66BFBF; /* Same border style for file input */
+    border-radius: 5px;
+    padding: 5px; /* Slight padding for file input */
+}
+
+.input-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #66BFBF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #58a6a6; /* Slightly darker shade for hover effect */
+}
+
+.profile-pic {
+    margin-bottom: 20px; /* Space below the profile picture */
+    border: 1px solid #66BFBF; /* Box border for profile picture */
+    border-radius: 5px; /* Rounded corners for the profile picture box */
+    padding: 10px; /* Padding inside the box */
+    display: flex; /* Flex to align items */
+    justify-content: center; /* Center the content */
+}
+
+.profile-pic img {
+    width: 100%; /* Make image responsive within the box */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for the image */
+}

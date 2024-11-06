@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="css/styles2.css">
+    <link rel="icon" href="icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Passions+Conflict&family=Sacramento&display=swap" rel="stylesheet">
+  </head
+<body>
+    <header class="header">
+        <h1>Contact Me</h1>
+        <p>Let's connect! Fill out the form or reach out through my social profiles below.</p>
+    </header>
+
+    <a href="javascript:void(0);" class="back-icon" onclick="history.back()">
+        ← Back
+    </a>
+    
+    <main class="main-content">
+        <section class="contact-form">
+            <h2 class="section-title">Get in Touch</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div id="formMessage" class="form-message"></div> <!-- Message Display -->
+        </section>
+
+        <section class="social-media">
+            <h2 class="section-title">Follow Me</h2>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/?gad_source=1&gclid=Cj0KCQiA_qG5BhDTARIsAA0UHSLYehcqZN1dmM7VKkjnB_li0rc9aUqpOqmueNTdubU8zCtry4GeOWgaApQAEALw_wcB" target="_blank" class="social-link"><img src="https://img.icons8.com/ios-filled/50/66BFBF/facebook--v1.png" alt="Facebook"></a>
+                <a href="https://in.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank" class="social-link"><img src="https://img.icons8.com/ios-filled/50/66BFBF/linkedin-circled--v1.png" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/accounts/login/" target="_blank" class="social-link"><img src="https://img.icons8.com/ios-filled/50/66BFBF/instagram-new--v1.png" alt="Instagram"></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Junaid | Crafted with ❤</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Simple validation (could be more complex)
+            if (name && email && message) {
+                document.getElementById('formMessage').innerText = "Thank you for your message, " + name + "! I'll get back to you shortly.";
+                document.getElementById('formMessage').style.color = "#66BFBF";
+            } else {
+                document.getElementById('formMessage').innerText = "Please fill in all fields.";
+                document.getElementById('formMessage').style.color = "red";
+            }
+
+            // Optionally clear the form fields
+            // document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>
