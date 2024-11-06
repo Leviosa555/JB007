@@ -85,13 +85,12 @@ p {
 }
 
 #downloadButton {
-    position: fixed;
+    background-color: #66BFBF;
     bottom: 20px; /* Distance from the bottom of the page */
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #4CAF50; /* Choose a color */
     color: white;
     border: none;
     border-radius: 5px;
@@ -100,5 +99,5 @@ p {
 
 /* Add a hover effect (optional) */
 #downloadButton:hover {
-    background-color: #45a049;
+    background-color: #5ca5a5;
 }
