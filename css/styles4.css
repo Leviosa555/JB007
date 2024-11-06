@@ -85,16 +85,16 @@ p {
 }
 
 #downloadButton {
-    background-color: #66BFBF;
-    bottom: 20px; /* Distance from the bottom of the page */
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
-    font-size: 16px;
+     background-color: #66BFBF;
     color: white;
     border: none;
     border-radius: 5px;
+    padding: 10px 20px; /* Added padding for better appearance */
     cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block; /* Make it a block element */
+    margin: 20px auto; /* Center it horizontally */
 }
 
 /* Add a hover effect (optional) */
